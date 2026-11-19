@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My Sweet Day — NutriBae</title>
+  <meta name="description" content="Track water, your NutriBae, movement and how you feel, earn Bae Points and never run out.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="myday" data-app>
+  <div id="site-top"></div>
+
+  <main>
+    <div class="day day--tech">
+      <!-- Dashboard hero -->
+      <section class="dash" aria-labelledby="dash-title">
+        <div class="dash__glow" aria-hidden="true"></div>
+        <div class="dash__head">
+          <div>
+            <p class="dash__eyebrow"><span class="dash__live" aria-hidden="true"></span>My Sweet Day · <span data-today-date></span></p>
+            <h1 class="dash__title" id="dash-title" data-greet>Hello, bae</h1>
+            <p class="dash__sub">Your daily wellness dashboard. Track your water, NutriBae and movement, check in with how you feel, and earn Bae Points for every sweet habit.</p>
+          </div>
+        </div>
+        <div class="dash__body">
+          <div class="score" role="img" aria-labelledby="score-label" data-score-wrap>
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="scoreGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7C9DF"/><stop offset="1" stop-color="#F19EC8"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="52" class="score__track"/>
+              <circle cx="60" cy="60" r="52" class="score__bar" data-score-bar/>
+            </svg>
+            <div class="score__txt"><strong data-score>0</strong><span id="score-label">Sweet Score</span></div>
+          </div>
+          <ul class="rings" aria-label="Today's goals">
+            <li data-ring="water"><span class="ring" style="--p:0"><span>💧</span></span><b>Water</b><small data-ring-txt="water">0/8</small></li>
+            <li data-ring="scoop"><span class="ring" style="--p:0"><span>🥤</span></span><b>NutriBae</b><small data-ring-txt="scoop">not yet</small></li>
+            <li data-ring="move"><span class="ring" style="--p:0"><span>👟</span></span><b>Move</b><small data-ring-txt="move">0 steps</small></li>
+            <li data-ring="feel"><span class="ring" style="--p:0"><span>💗</span></span><b>Check-in</b><small data-ring-txt="feel">not yet</small></li>
+          </ul>
+        </div>
+        <div class="dash__stats">
+          <div><strong data-stat-streak>0</strong><span>day streak 🔥</span></div>
+          <div><strong data-stat-points>0</strong><span>Bae Points</span></div>
+          <div><strong data-stat-level>Sugar Cube</strong><span>level</span></div>
+        </div>
+      </section>
+
+      <!-- What is this? -->
+      <section class="explain" data-explain aria-labelledby="explain-title">
+        <div class="explain__head">
+          <h2 id="explain-title">How My Sweet Day works</h2>
+          <button class="rd-link" type="button" data-explain-close>Got it</button>
+        </div>
+        <ol class="explain__grid">
+          <li><span class="explain__ico">📊</span><strong>Track your day</strong><span>Tap to log water, scoops and steps. Your Sweet Score fills up as you go.</span></li>
+          <li><span class="explain__ico">💗</span><strong>Check in with you</strong><span>A 10-second “how do I feel?” log that shows your energy and mood patterns.</span></li>
+          <li><span class="explain__ico">⭐</span><strong>Earn Bae Points</strong><span>Every habit earns points, badges and new levels, from Sugar Cube to Wedding Cake.</span></li>
+          <li><span class="explain__ico">🔔</span><strong>Never run out</strong><span>We estimate when your NutriBae runs low and can remind you before it does.</span></li>
+        </ol>
+      </section>
+      <button class="explain-open rd-link" type="button" data-explain-open hidden>How does My Sweet Day work?</button>
+
+      <div class="tabs">
+        <div class="seg" role="group" aria-label="My Sweet Day sections">
+          <button type="button" class="seg__btn" data-tab="today"><span aria-hidden="true">📊</span>Today</button>
+          <button type="button" class="seg__btn" data-tab="feel"><span aria-hidden="true">💗</span>How I feel</button>
+          <button type="button" class="seg__btn" data-tab="points"><span aria-hidden="true">⭐</span>Points</button>
+          <button type="button" class="seg__btn" data-tab="refill"><span aria-hidden="true">🔄</span>Refills</button>
+          <button type="button" class="seg__btn" data-tab="connect"><span aria-hidden="true">⌚</span>Wearables</button>
+        </div>
+      </div>
+
+      <!-- TODAY -->
+      <section data-panel="today" class="day" style="padding:0">
+        <div class="card"><div class="week" data-week></div></div>
+
+        <div class="card">
+          <div class="card__head"><h2>Water</h2><p class="card__hint" data-water-count></p></div>
+          <div class="water" data-water></div>
+          <label class="field" style="margin-top:12px;max-width:180px">Daily goal (glasses)<input type="number" inputmode="numeric" min="1" max="20" data-goal></label>
+        </div>
+
+        <div class="card">
+          <div class="card__head"><h2>My NutriBae today</h2><p class="card__hint">Scoops &amp; capsules</p></div>
+          <div data-scoops></div>
+        </div>
+
+        <div class="card">
+          <div class="card__head"><h2>Movement</h2><p class="card__hint" data-move-src></p></div>
+          <div class="field-row">
+            <label class="field">Steps<input type="number" inputmode="numeric" min="0" max="100000" placeholder="e.g. 6500" data-steps></label>
+            <label class="field">Active minutes<input type="number" inputmode="numeric" min="0" max="1440" placeholder="e.g. 30" data-active></label>
+          </div>
+          <div class="rd-actions" style="margin-top:12px">
+            <button class="btn" type="button" data-move-save>Save</button>
+            <a class="rd-link" href="#connect" data-tab="connect">Sync from Apple Watch or Fitbit</a>
+          </div>
+        </div>
+
+        <div class="card" id="notify" data-notify></div>
+
+        <div class="card card--blush">
+          <div class="card__head"><h2>Need ideas?</h2></div>
+          <div class="rd-actions" style="flex-wrap:wrap">
+            <a class="btn" href="recipes.html">Cook something sweet</a>
+            <a class="btn btn--ghost" href="swap.html">Sweet Swap a craving</a>
+            <a class="btn btn--ghost" href="plan.html">Quiz Lab</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEEL -->
+      <section data-panel="feel" class="day" style="padding:0" hidden>
+        <div class="card">
+          <div class="card__head"><h2>How do I feel today?</h2><p class="card__hint" data-feel-saved></p></div>
+          <div data-feel></div>
+          <label class="field">A note for yourself (optional)<textarea maxlength="500" placeholder="What made today sweet?" data-feel-note></textarea></label>
+          <button class="btn btn--block" type="button" data-feel-save style="margin-top:12px">Save today’s check-in</button>
+        </div>
+        <div class="card">
+          <div class="card__head"><h2>Energy, last 14 days</h2></div>
+          <div class="bars" data-energy-bars aria-hidden="true"></div>
+          <div class="bars-x" data-energy-x aria-hidden="true"></div>
+          <ul class="earn" data-feel-summary style="margin-top:14px"></ul>
+          <p class="fine">This log is just for you, to notice your own patterns. It isn’t medical advice. Talk with your doctor about any health concerns.</p>
+        </div>
+      </section>
+
+      <!-- POINTS -->
+      <section data-panel="points" class="day" style="padding:0" hidden>
+        <div class="card card--blush level">
+          <p class="app-eyebrow" data-lv-pts style="margin:0"></p>
+          <p class="level__name" data-lv-name></p>
+          <div class="meter"><span data-lv-meter></span></div>
+          <p class="card__hint" data-lv-next></p>
+        </div>
+        <div class="card">
+          <div class="card__head"><h2>Badges</h2></div>
+          <ul class="badges" data-badges></ul>
+        </div>
+        <div class="card">
+          <div class="card__head"><h2>Ways to earn</h2></div>
+          <ul class="earn">
+            <li><span>Make your Sweet Plan</span><b>+20</b></li>
+            <li><span>Cook a recipe in cook mode</span><b>+10</b></li>
+            <li><span>Daily “How I feel” check-in</span><b>+10 a day</b></li>
+            <li><span>Hit your water goal</span><b>+5 a day</b></li>
+            <li><span>Log your NutriBae</span><b>+5 a day</b></li>
+            <li><span>Log your movement</span><b>+5 a day</b></li>
+            <li><span>Try a Sweet Swap</span><b>+3 each</b></li>
+          </ul>
+          <p class="fine">Turning points into rewards is coming soon. Your points are saved on this device for now.</p>
+        </div>
+        <div class="card">
+          <div class="card__head"><h2>History</h2></div>
+          <ul class="hist" data-hist></ul>
+        </div>
+      </section>
+
+      <!-- REFILL -->
+      <section data-panel="refill" class="day" style="padding:0" hidden>
+        <div class="card">
+          <div class="card__head"><h2>Smart refills</h2></div>
+          <p class="card__hint" style="margin-bottom:6px">We estimate when you’ll run out from the scoops you log, so you can reorder (or adjust your subscription) before you’re empty.</p>
+          <div data-refill></div>
+          <label class="field" style="margin-top:12px"><span class="sr-only">Track another product</span><select data-refill-add></select></label>
+        </div>
+      </section>
+
+      <!-- CONNECT -->
+      <section data-panel="connect" class="day" style="padding:0" hidden>
+        <div class="card">
+          <div class="card__head"><h2>Apple Watch &amp; Fitbit</h2></div>
+          <div class="wear">
+            <span class="wear__logo" aria-hidden="true">⌚</span>
+            <div>
+              <strong>Apple Watch · Apple Health</strong>
+              <p>Steps, active minutes and workouts from your Apple Watch will fill in My Sweet Day automatically in the NutriBae iPhone app.</p>
+              <span class="pill">Coming with the iPhone app</span>
+            </div>
+          </div>
+          <div class="wear">
+            <span class="wear__logo wear__logo--fit" aria-hidden="true">✦</span>
+            <div>
+              <strong>Fitbit</strong>
+              <p>Fitbit activity will sync through the NutriBae app on Android (Health Connect) and through Google Health.</p>
+              <span class="pill">Coming with the app</span>
+            </div>
+          </div>
+          <p class="fine">Until then, type your steps and active minutes in Today. They count for Bae Points the same way.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/app-store.js"></script>
+  <script src="js/myday.js"></script>
+  <script src="js/notify.js"></script>
+</body>
+</html>

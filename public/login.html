@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sign in — NutriBae</title>
+  <meta name="description" content="Sign in or create your NutriBae account to see your orders, coupons, favorites and rewards on every device.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body data-page="login" data-app>
+  <div id="site-top"></div>
+
+  <main>
+    <div class="container lg">
+      <section class="lg-card" aria-labelledby="lg-title">
+        <div class="lg-card__glow" aria-hidden="true"></div>
+        <div class="lg-intro">
+        <img class="lg-logo" src="assets/images/logo.png" alt="NutriBae" width="180" height="52">
+        <h1 class="lg-title" id="lg-title" data-lg-title>Welcome back, bae&nbsp;💗</h1>
+        <p class="lg-sub" data-lg-sub>Sign in to see your profile, orders and rewards on every device.</p>
+
+        </div>
+
+        <div class="lg-main">
+        <!-- Sign in / Create account -->
+        <div class="lg-tabs" role="tablist" aria-label="Account">
+          <button type="button" role="tab" id="tab-in" aria-selected="true" aria-controls="lg-panel" data-lg-tab="signin">Sign in</button>
+          <button type="button" role="tab" id="tab-up" aria-selected="false" aria-controls="lg-panel" data-lg-tab="signup">Create account</button>
+        </div>
+
+        <div class="lg-panel" id="lg-panel" role="tabpanel" aria-labelledby="tab-in">
+          <!-- Email form: changes between sign in, create account and reset -->
+          <form class="lg-form" data-lg-form novalidate>
+            <label class="lg-field" data-field="name" hidden>First name
+              <input name="name" autocomplete="given-name" maxlength="60" placeholder="Your first name">
+            </label>
+            <fieldset class="lg-field lg-bday" data-field="birthday" hidden>
+              <legend>Birthday <span class="lg-bday__perk">🎂 bonus spin on your birthday</span></legend>
+              <div class="lg-bday__row">
+                <input name="mm" inputmode="numeric" maxlength="2" placeholder="MM" aria-label="Birth month" autocomplete="bday-month">
+                <input name="dd" inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Birth day" autocomplete="bday-day">
+                <input name="yyyy" inputmode="numeric" maxlength="4" placeholder="YYYY (optional)" aria-label="Birth year, optional" autocomplete="bday-year">
+              </div>
+            </fieldset>
+            <label class="lg-field" data-field="email">Email
+              <input name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
+            </label>
+            <label class="lg-field" data-field="code" hidden>6-digit code
+              <input name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456">
+            </label>
+            <label class="lg-field" data-field="password">Password
+              <span class="lg-pw">
+                <input name="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+                <button type="button" class="lg-pw__show" data-lg-showpw aria-label="Show password">Show</button>
+              </span>
+              <small class="lg-hint" data-lg-pwhint hidden>At least 8 characters, with letters and a number.</small>
+            </label>
+            <button class="lg-link lg-forgot" type="button" data-lg-forgot>Forgot password?</button>
+            <p class="lg-msg" role="alert" data-lg-msg></p>
+            <button class="btn btn--block lg-submit" type="submit" data-lg-submit>Sign in</button>
+            <button class="lg-link lg-back" type="button" data-lg-back hidden>← Back to sign in</button>
+          </form>
+
+          <div class="lg-or"><span>or continue with</span></div>
+
+          <div class="lg-btns">
+            <div class="lg-google" data-lg-google></div>
+            <button class="auth-btn auth-btn--apple" type="button" data-lg-apple>
+              <svg viewBox="0 0 17 20" aria-hidden="true"><path fill="currentColor" d="M14.2 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9C3.7 4.8 2 5.9 1.1 7.5c-1.9 3.2-.5 8 1.3 10.6.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-2.9-4.5zM11.6 3c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg>
+              <span data-lg-apple-label>Continue with Apple</span>
+            </button>
+            <p class="lg-note" data-lg-social-note hidden>Google and Apple sign-in turn on once they’re connected. For now, use your email and a password.</p>
+          </div>
+        </div>
+
+        </div>
+
+        <div class="lg-extra">
+        <ul class="lg-perks">
+          <li><span>📦</span>Track your orders</li>
+          <li><span>🎟️</span>Keep your coupons safe</li>
+          <li><span>❤️</span>Save favorites &amp; addresses</li>
+          <li><span>⭐</span>Your stars and rewards everywhere</li>
+        </ul>
+
+        <div class="lg-or"><span>or</span></div>
+        <a class="lg-guest" href="profile.html" data-lg-guest>Continue without an account →</a>
+        <p class="lg-fine">Without an account, your profile is saved only on this device.<br>By continuing you agree to our <a href="faq.html">Terms and Privacy</a>. We only use your name and email for your account.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

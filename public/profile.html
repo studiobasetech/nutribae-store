@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My profile — NutriBae</title>
+  <meta name="description" content="Your NutriBae orders, coupons, rewards, subscriptions and saved recipes in one place.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="profile" data-app>
+  <div id="site-top"></div>
+
+  <main>
+    <div class="container pf" data-profile>
+      <!-- Sign in / account -->
+      <section class="pf-auth" aria-labelledby="auth-title" data-pf-auth hidden></section>
+
+      <!-- Hello card -->
+      <section class="pf-hero" aria-labelledby="pf-title">
+        <div class="pf-hero__glow" aria-hidden="true"></div>
+        <div class="pf-hero__top">
+          <div class="pf-avatar" aria-hidden="true" data-pf-avatar>B</div>
+          <div class="pf-hero__who">
+            <p class="pf-eyebrow">My profile</p>
+            <h1 class="pf-title" id="pf-title" data-pf-hello>Hi, bae 💗</h1>
+            <p class="pf-email" data-pf-email></p>
+          </div>
+          <button class="pf-edit" type="button" data-pf-edit aria-expanded="false">Edit</button>
+        </div>
+        <form class="pf-editform" data-pf-editform hidden>
+          <label>First name <input name="firstName" maxlength="40" autocomplete="given-name" placeholder="Your first name"></label>
+          <button class="btn" type="submit">Save</button>
+        </form>
+        <div class="pf-chips" data-pf-chips></div>
+      </section>
+
+      <!-- Quick stats -->
+      <ul class="pf-stats" aria-label="At a glance" data-pf-stats></ul>
+
+      <!-- Quick links -->
+      <nav class="pf-grid" aria-label="Profile shortcuts">
+        <a href="#orders"><span>📦</span>My orders</a>
+        <a href="#favorites"><span>❤️</span>Favorites</a>
+        <a href="#coupons"><span>🎟️</span>My coupons</a>
+        <a href="#addresses"><span>📍</span>Addresses</a>
+        <a href="bakery.html"><span>🎮</span>Play To Win</a>
+        <a href="#subscription"><span>🔁</span>Subscriptions</a>
+        <a href="my-day.html"><span>💗</span>My Sweet Day</a>
+        <a href="faq.html"><span>💬</span>Help &amp; FAQ</a>
+      </nav>
+
+      <!-- Orders -->
+      <section class="pf-card" id="orders" aria-labelledby="orders-title">
+        <div class="pf-card__head"><h2 id="orders-title">📦 My orders</h2></div>
+        <div data-pf-orders><p class="pf-muted">Loading…</p></div>
+      </section>
+
+      <!-- Favorites -->
+      <section class="pf-card" id="favorites" aria-labelledby="fav-title">
+        <div class="pf-card__head"><h2 id="fav-title">❤️ My favorites</h2></div>
+        <div class="pf-tabs" role="tablist" aria-label="Favorites">
+          <button type="button" role="tab" aria-selected="true" data-pf-tab="products">Products <span data-pf-count="products"></span></button>
+          <button type="button" role="tab" aria-selected="false" data-pf-tab="recipes">Recipes <span data-pf-count="recipes"></span></button>
+        </div>
+        <div data-pf-favbox></div>
+      </section>
+
+      <!-- Coupons -->
+      <section class="pf-card" id="coupons" aria-labelledby="coupons-title">
+        <div class="pf-card__head"><h2 id="coupons-title">🎟️ My coupons</h2><button class="pf-link" type="button" data-pf-spin>Spin the wheel</button></div>
+        <ul class="mycoupons__list" data-pf-coupons><li class="pf-muted">Loading…</li></ul>
+      </section>
+
+      <!-- Addresses -->
+      <section class="pf-card" id="addresses" aria-labelledby="addr-title">
+        <div class="pf-card__head"><h2 id="addr-title">📍 My addresses</h2><button class="pf-link" type="button" data-pf-addr-new>+ Add address</button></div>
+        <div data-pf-addresses></div>
+      </section>
+
+      <!-- Play To Win -->
+      <section class="pf-card" id="rewards" aria-labelledby="rewards-title">
+        <div class="pf-card__head"><h2 id="rewards-title">🎮 Play To Win</h2><a class="pf-link" href="bakery.html">Open</a></div>
+        <div data-pf-game><p class="pf-muted">Loading…</p></div>
+      </section>
+
+      <!-- Subscription -->
+      <section class="pf-card" id="subscription" aria-labelledby="sub-title">
+        <div class="pf-card__head"><h2 id="sub-title">🔁 Subscribe &amp; Save</h2></div>
+        <p>Save 15% on every delivery, with free shipping. Skip a month, change your card or cancel anytime.</p>
+        <div class="pf-btns">
+          <a class="btn" href="/api/portal">Manage my subscription</a>
+          <a class="btn btn--outline" href="shop.html">Start one</a>
+        </div>
+        <p class="pf-muted pf-small">You’ll log in with the email you used to order.</p>
+      </section>
+
+      <!-- Recipes -->
+      <section class="pf-card" id="recipes" aria-labelledby="recipes-title">
+        <div class="pf-card__head"><h2 id="recipes-title">📖 My cookbook</h2><a class="pf-link" href="recipes.html">All recipes</a></div>
+        <div data-pf-cookbook></div>
+      </section>
+
+      <!-- My Sweet Day -->
+      <section class="pf-card" aria-labelledby="day-title">
+        <div class="pf-card__head"><h2 id="day-title">💗 My Sweet Day</h2><a class="pf-link" href="my-day.html">Open</a></div>
+        <div data-pf-day></div>
+      </section>
+
+      <!-- Settings -->
+      <section class="pf-card" id="settings" aria-labelledby="settings-title">
+        <div class="pf-card__head"><h2 id="settings-title">⚙️ Settings</h2></div>
+        <ul class="pf-rows" data-pf-settings></ul>
+      </section>
+
+      <p class="pf-note">Not signed in? Your profile is saved on this device. Sign in with Google or Apple to keep it on every device.</p>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/app-store.js"></script>
+  <script src="js/recipes-data.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NutriBae — Wellness just got sweeter</title>
+  <meta name="description" content="Dessert-inspired plant-based protein powder. Vegan, gluten-free, soy-free, dairy-free and non-GMO, sweetened with stevia.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <div id="site-top"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__media">
+        <!-- Left: short video. Save it as assets/videos/hero-left.mp4 (the poster shows until then). -->
+        <video class="hero__half" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-left-poster.jpg" aria-hidden="true" data-hero-video>
+          <source src="assets/videos/hero-left.mp4" type="video/mp4">
+        </video>
+        <!-- Right: Strawberry Shortcake Energy Powder -->
+        <img class="hero__half" src="assets/images/energy-strawberry-shortcake.jpg" alt="" fetchpriority="high">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <h1 class="hero__title">Wellness just got sweeter</h1>
+      <div class="hero__btns">
+        <a class="btn" href="shop.html">SHOP NOW</a>
+      </div>
+      <p class="rating-badge rating-badge--hero" data-overall-rating hidden></p>
+    </section>
+
+    <!-- Benefits -->
+    <ul class="benefits benefits--top">
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 27C4 15 11 5 28 4c1 15-8 23-20 21"/><path d="M5 27L20 12M11 21h7M15 17h7M14 18v-7M18 14V7"/></svg>
+        <h3>Plant-Based</h3>
+        <p>Pure. Simple. 100% plant-powered.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="M7 25L25 7M16 26V8"/><path d="M16 12c-2-1-3-3-3-5 2 1 3 3 3 5zM16 12c2-1 3-3 3-5-2 1-3 3-3 5zM16 17c-2-1-3-3-3-5 2 1 3 3 3 5zM16 17c2-1 3-3 3-5-2 1-3 3-3 5zM16 22c-2-1-3-3-3-5 2 1 3 3 3 5zM16 22c2-1 3-3 3-5-2 1-3 3-3 5z"/></svg>
+        <h3>Gluten-Free</h3>
+        <p>Free from gluten, full of flavor.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 27S3 19 3 11c0-4 3-7 6.5-7 3 0 5 2 6.5 4 1.5-2 3.5-4 6.5-4C26 4 29 7 29 11c0 8-13 16-13 16z"/></svg>
+        <h3>Low Sugar</h3>
+        <p>Sweetened with stevia, just 1–4g added sugar per serving.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29V15"/><path d="M16 15C16 9 20 5 27 4c0 7-4 11-11 11z"/><path d="M16 18c0-4-3-7-9-7 0 5 3 7 9 7z"/></svg>
+        <h3>Soy-Free</h3>
+        <p>No soy, just plant protein that tastes like dessert.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="13.5"/><path d="M12 9h8v2l2 4v10H10V15l2-4zM12 11h8M7 25L25 7"/></svg>
+        <h3>Dairy-Free</h3>
+        <p>No dairy or lactose, still creamy and dreamy.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="14" width="18" height="15" rx="1"/><path d="M11 14V9a5 5 0 0 1 10 0v5M16 22v3"/><circle cx="16" cy="20.5" r="1.5" fill="currentColor"/></svg>
+        <h3>Non-GMO</h3>
+        <p>Good for you, good for the planet.</p>
+      </li>
+    </ul>
+
+    <!-- Real customer reviews (Judge.me; hidden until there are reviews) -->
+    <section class="rv" aria-labelledby="rv-title" data-home-reviews hidden>
+      <div class="container rv__head">
+        <h2 class="h-section" id="rv-title">Loved by <span class="pink-text">real babes</span></h2>
+        <p class="rv__score" data-rv-score></p>
+      </div>
+      <div class="rv__track" data-rv-track></div>
+    </section>
+
+    <!-- Play To Win banner -->
+    <section class="container hwin" aria-labelledby="hwin-title">
+      <a class="hwin__card" href="bakery.html">
+        <div class="hwin__text">
+          <p class="hwin__kicker">🎁 100% FREE · NO PURCHASE NEEDED TO PLAY</p>
+          <h2 class="hwin__title" id="hwin-title">WIN FREE<br><span>PRODUCTS</span></h2>
+          <p class="hwin__sub">Play our game, invite friends and get NutriBae for <strong>$0</strong>, with free shipping.</p>
+          <span class="hwin__btn">Play now ▶</span>
+        </div>
+        <div class="hwin__scene" aria-hidden="true">
+          <div class="hs-sky"></div>
+          <img class="hs-cloud hs-cloud--a" src="assets/game/cloud1.png" alt="">
+          <img class="hs-cloud hs-cloud--b" src="assets/game/cloud2.png" alt="">
+          <div class="hs-mid"></div>
+          <img class="hs-tree hs-tree--a" src="assets/game/tree.png" alt="">
+          <img class="hs-tree hs-tree--b" src="assets/game/tree.png" alt="">
+          <div class="hs-ground"></div>
+          <div class="hs-move hs-move--1"><img class="hs-plat" src="assets/game/platform.png" alt=""><img class="hs-jar hs-jar--on" src="assets/game/jar-vanilla.png" alt=""></div>
+          <div class="hs-move hs-move--2"><img class="hs-jar" src="assets/game/jar-strawberry.png" alt=""></div>
+          <div class="hs-move hs-move--3"><img class="hs-shaker" src="assets/game/shaker.png" alt=""></div>
+          <div class="hs-move hs-move--4"><img class="hs-cake" src="assets/game/cake.png" alt=""></div>
+          <div class="hs-move hs-move--5"><img class="hs-jar" src="assets/game/jar-cotton.png" alt=""></div>
+          <div class="hs-move hs-move--6"><img class="hs-heart" src="assets/game/heart.png" alt=""></div>
+          <img class="hs-girl" src="assets/game/girl.png" alt="">
+          <div class="hs-hud"><span class="hs-hearts"><img src="assets/game/heart.png" alt=""><img src="assets/game/heart.png" alt=""><img src="assets/game/heart.png" alt=""></span><span class="hs-score">SCORE <b>01280</b></span></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- All products carousel -->
+    <section class="pc" aria-labelledby="pc-title">
+      <div class="container pc__head">
+        <div>
+          <p class="pc__eyebrow">Shop the sweet stuff</p>
+          <h2 class="h-section" id="pc-title">Meet the <span class="pink-text">sweet lineup</span></h2>
+        </div>
+        <div class="pc__nav">
+          <button class="pc__arrow" type="button" aria-label="Previous products" data-pc-prev>‹</button>
+          <button class="pc__arrow" type="button" aria-label="Next products" data-pc-next>›</button>
+        </div>
+      </div>
+      <div class="pc__track" data-pc-track tabindex="0" aria-label="All NutriBae products"></div>
+      <div class="pc__dots" data-pc-dots aria-hidden="true"></div>
+      <p class="container pc__all"><a href="shop.html">See all products &amp; bundles →</a></p>
+    </section>
+
+    <!-- Protein flavors carousel (Vanilla + Chocolate) -->
+    <section class="feature-row pslide" aria-roledescription="carousel" aria-label="Our protein powder flavors" data-pslide>
+      <div class="pslide__track" data-pslide-track>
+        <div class="pslide__slide" role="group" aria-roledescription="slide" aria-label="1 of 2">
+          <div class="container feature-row__grid">
+            <div class="feature-row__media">
+              <img src="assets/images/vanilla-birthday-cake.jpg" alt="NutriBae Plant-Based Vanilla Birthday Cake Protein Powder tub" loading="lazy" width="1400" height="1400">
+            </div>
+            <div class="feature-row__text">
+              <p class="pslide__flavor">Flavor 1 of 2 · Vanilla</p>
+              <h2 class="h-section">Plant-Based Vanilla Birthday Cake Protein Powder</h2>
+              <p class="body-copy">Indulge your sweet tooth guilt-free with a creamy, dreamy protein that tastes like a slice of celebration cake. Made with 100% plant-based protein, this delicious treat is vegan, gluten-free, soy-free, lactose-free, and non-GMO, crafted in an FDA-registered facility in the USA. Each serving delivers 20g of protein, sweetened with stevia, to support muscle recovery, promote growth, and fuel your day or post-workout routine. Its rich, velvety texture makes every sip feel like a special occasion.</p>
+              <a class="btn" href="product.html?handle=vanilla-birthday-cake-plant-based-protein-powder">Shop Vanilla</a>
+            </div>
+          </div>
+        </div>
+        <div class="pslide__slide" role="group" aria-roledescription="slide" aria-label="2 of 2">
+          <div class="container feature-row__grid">
+            <div class="feature-row__media">
+              <img src="assets/images/chocolate-brownie-delight.jpg" alt="NutriBae Plant-Based Chocolate Brownie Delight Protein Powder tub" loading="lazy" width="1400" height="1400">
+            </div>
+            <div class="feature-row__text">
+              <p class="pslide__flavor">Flavor 2 of 2 · Chocolate</p>
+              <h2 class="h-section">Plant-Based Chocolate Brownie Delight Protein Powder</h2>
+              <p class="body-copy">Satisfy your chocolate cravings with a luxuriously creamy protein that tastes like fudgy brownies. Made with 100% plant-based protein, it’s vegan, gluten-free, soy-free, lactose-free, and non-GMO, crafted in an FDA-registered facility in the USA. Each serving delivers 21g of protein, sweetened with stevia, to support muscle recovery and fuel your day or post-workout routine. Rich, chocolatey and dessert-worthy in every sip.</p>
+              <a class="btn" href="product.html?handle=chocolate-brownie-delight-plant-based-protein-powder">Shop Chocolate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container pslide__controls">
+        <button class="pc__arrow" type="button" aria-label="Previous flavor" data-pslide-prev>‹</button>
+        <div class="pslide__dots" role="tablist" aria-label="Choose a flavor">
+          <button type="button" role="tab" aria-selected="true" aria-label="Vanilla" data-pslide-dot="0"><span>🎂</span> Vanilla</button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Chocolate" data-pslide-dot="1"><span>🍫</span> Chocolate</button>
+        </div>
+        <button class="pc__arrow" type="button" aria-label="Next flavor" data-pslide-next>›</button>
+      </div>
+    </section>
+
+    <!-- Energy + Hydration -->
+    <section class="feature-row feature-row--flip">
+      <div class="container feature-row__grid">
+        <div class="feature-row__media feature-row__duo">
+          <a href="product.html?handle=energy-powder-strawberry-shortcake"><img src="assets/images/energy-strawberry-shortcake.jpg" alt="NutriBae Energy Powder, Strawberry Shortcake" loading="lazy" width="800" height="1000"></a>
+          <a href="product.html?handle=hydration-powder-peach-mango"><img src="https://cdn.shopify.com/s/files/1/0934/0384/0847/files/20261113142112-33c43501-590c-4253-82e9-2e5f9430711c.png?v=1794597772&width=900" alt="NutriBae Hydration Powder, Peach Mango, open jar with a scoop, peaches and mango" loading="lazy" width="900" height="900"></a>
+        </div>
+        <div class="feature-row__text">
+          <h2 class="h-section">Energy &amp; Hydration that taste like <span class="pink-text">dessert</span></h2>
+          <p class="body-copy">Sugar-free and seriously sweet. Energy gives you a smooth lift with natural caffeine from green tea and L-theanine, no jitters or crash. Hydration is caffeine-free and packed with electrolytes, perfect after workouts or all day long.</p>
+          <ul class="duo-list">
+            <li><strong>Energy</strong> · Strawberry Shortcake or Cotton Candy</li>
+            <li><strong>Hydration</strong> · Peach Mango</li>
+          </ul>
+          <div class="duo-btns">
+            <a class="btn" href="shop.html?cat=energy">Shop Energy</a>
+            <a class="btn btn--outline" href="shop.html?cat=hydration">Shop Hydration</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Lab banner -->
+    <section class="container hbn" aria-labelledby="hquiz-title">
+      <a class="hbn__card hbn__card--quiz" href="plan.html">
+        <div class="hbn__text">
+          <p class="hbn__eyebrow">✨ Quiz Lab</p>
+          <h2 class="hbn__title" id="hquiz-title">Find your <span>sweet routine</span> in 60 seconds</h2>
+          <p class="hbn__sub">Fun quizzes that match you with your flavor, your goal and your perfect daily routine, plus recipes picked just for you.</p>
+          <span class="hbn__btn">Take a quiz →</span>
+        </div>
+        <div class="hbn__visual" aria-hidden="true">
+          <div class="qmock">
+            <div class="qmock__top"><span>Find your flavor match</span><b>2/4</b></div>
+            <div class="qmock__bar"><i></i></div>
+            <p class="qmock__q">Pick a birthday dessert</p>
+            <div class="qmock__opts">
+              <span>🎂 Funfetti cake</span>
+              <span class="is-on">🍫 Fudgy brownie</span>
+              <span>🍓 Strawberry shortcake</span>
+              <span>🍭 Cotton candy</span>
+            </div>
+          </div>
+          <div class="qmock__badge">🎉 Your match: <strong>Chocolate Brownie Delight</strong></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Cookbook bonus -->
+    <section class="feature-row">
+      <div class="container feature-row__grid">
+        <div class="feature-row__media">
+          <!-- Silent promo for the free cookbook; plays muted on a loop when it scrolls into view -->
+          <video class="promo-video" src="assets/videos/cookbook-promo.mp4" poster="assets/images/cookbook-promo-poster.jpg"
+                 muted loop playsinline preload="none" width="720" height="1280"
+                 aria-label="Wellness Made Sweet cookbook: 25 dessert recipes made with NutriBae protein, free with any purchase" data-promo-video></video>
+        </div>
+        <div class="feature-row__text">
+          <h2 class="h-section bonus-title">FREE BONUS
+            <svg viewBox="0 0 24 22" aria-hidden="true"><path d="M12 21s-9-5.6-9-12.2C3 5.6 5.4 3 8.4 3c1.7 0 2.9.8 3.6 2 .7-1.2 1.9-2 3.6-2C18.6 3 21 5.6 21 8.8 21 15.4 12 21 12 21z" fill="var(--pink-deep)"/></svg>
+          </h2>
+          <h3 class="h-section">Free with any purchase: your digital copy of <span class="pink-text">Wellness Made Sweet</span></h3>
+          <p class="body-copy">25 Dessert-Inspired Smoothies, Breakfast &amp; Snacks made with NutriBae Plant-based Protein powder.</p>
+          <p class="body-copy bonus-app">📱 <strong>Plus, all 25 recipes are in the NutriBae app.</strong> Find them in the Recipes tab with step-by-step cook mode, timers and one tap to shop what you’re missing.</p>
+          <p class="body-copy">This cookbook is your ultimate guide to creating delicious, high-protein meals that are easy to make and perfect for any time of day. Every recipe is sugar-free, gluten-free, and packed with protein, making it a guilt-free way to fuel your body and support your wellness goals. From indulgent dessert-inspired smoothies to energizing breakfasts and satisfying snacks, you’ll enjoy tasty food that nourishes you without compromise. Whether you’re looking to boost your protein intake, maintain a plant-based lifestyle, or simply try new creative recipes, this collection makes healthy eating simple, fun, and absolutely delicious.</p>
+          <a class="btn" href="shop.html">Shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sweet Swap banner -->
+    <section class="container hbn" aria-labelledby="hswap-title">
+      <a class="hbn__card hbn__card--swap" href="swap.html">
+        <div class="hbn__text">
+          <p class="hbn__eyebrow">🔄 Sweet Swap</p>
+          <h2 class="hbn__title" id="hswap-title">Craving something sweet? <span>Swap it.</span></h2>
+          <p class="hbn__sub">Pick your craving and get the NutriBae version, with more protein and fewer calories, side by side.</p>
+          <span class="hbn__btn">Find my swap →</span>
+        </div>
+        <div class="hbn__visual" aria-hidden="true">
+          <div class="smock">
+            <div class="smock__col">
+              <span class="smock__emoji">🥞</span>
+              <strong>Diner pancakes</strong>
+              <small>with syrup</small>
+              <ul><li><b>520</b> kcal</li><li><b>11g</b> protein</li><li><b>90g</b> carbs</li></ul>
+            </div>
+            <span class="smock__vs">VS</span>
+            <div class="smock__col smock__col--nb">
+              <img src="assets/recipes/birthday-cake-pancakes.jpg" alt="" loading="lazy">
+              <strong>Birthday Cake Pancakes</strong>
+              <small>NutriBae recipe</small>
+              <ul><li><b>280</b> kcal</li><li><b>33g</b> protein</li><li><b>26g</b> carbs</li></ul>
+            </div>
+          </div>
+          <p class="smock__fine">Usual numbers are rough averages for a common serving.</p>
+        </div>
+      </a>
+    </section>
+
+    <!-- Plant based nutrition + video (side by side on desktop, stacked on phones) -->
+    <section class="split">
+      <div class="split__video">
+        <video src="assets/videos/nutribae.mp4" poster="assets/images/video-poster.jpg" autoplay muted playsinline loop preload="metadata" aria-label="Frosting pouring onto a NutriBae protein powder tub" data-split-video></video>
+      </div>
+      <div class="band" aria-label="Plant based nutrition">
+        <span class="band__line">PLANT</span>
+        <span class="band__line">BASED</span>
+        <span class="band__line">NUTRITION</span>
+      </div>
+    </section>
+
+
+    <!-- Founder story (like Bloom's "Created by someone like you") -->
+    <section class="founder" aria-labelledby="founder-title">
+      <div class="container founder__grid">
+        <div class="founder__media">
+          <span class="founder__blob" aria-hidden="true"></span>
+          <img class="founder__photo" src="assets/images/founder-kim.jpg" alt="Kim Peele, founder of NutriBae" width="1254" height="1254" loading="lazy">
+          <div class="founder__tag">
+            <span class="founder__initial" aria-hidden="true">K</span>
+            <span><strong>Kim Peele</strong><br>Founder of NutriBae</span>
+          </div>
+        </div>
+        <div class="founder__text">
+          <svg class="founder__spark founder__spark--a" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg><svg class="founder__spark founder__spark--b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg>
+          <span class="founder__eyebrow">Our story</span>
+          <h2 class="founder__title" id="founder-title">Made by someone <span class="founder__squiggle">like you</span></h2>
+          <p class="founder__lead">After a year bedbound with lupus and peripheral neuropathy, Kim learned that the right support can change how you feel from the inside out. She created NutriBae for women who want wellness that’s simple, effective and actually tastes like dessert.</p>
+          <figure class="founder__quote">
+            <svg class="founder__mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V22C0 9 7 2 19 0l2 5c-7 2-10 6-10 12h9v19H0zm27 0V22c0-13 7-20 19-22l2 5c-7 2-10 6-10 12h9v19H27z" fill="currentColor"/></svg>
+            <blockquote>NutriBae is a movement for women who want to take control of their wellness, glow from the inside out, and live life full of energy, no matter their journey.</blockquote>
+            <figcaption class="founder__sign">Kim</figcaption>
+          </figure>
+          <ul class="founder__chips">
+            <li><svg class="founder__spark founder__spark--chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg>Founded by a woman</li>
+            <li><svg class="founder__spark founder__spark--chip" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg>Made in the USA</li>
+          </ul>
+          <a class="founder__link" href="about.html">Read our story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get the app (add to home screen) -->
+    <section class="container appdl" aria-labelledby="appdl-title" data-appdl>
+      <div class="appdl__card">
+        <div class="appdl__text">
+          <p class="appdl__eyebrow">📱 The NutriBae app</p>
+          <h2 class="h-section" id="appdl-title">Your sweet routine, <span class="pink-text">in your pocket</span></h2>
+          <ul class="appdl__list">
+            <li>🍰 All 25 cookbook recipes with cook mode</li>
+            <li>🎮 Play To Win free products</li>
+            <li>💗 My Sweet Day tracker and reminders</li>
+            <li>🎡 A free spin every week with notifications</li>
+          </ul>
+          <button class="btn" type="button" data-appdl-install hidden>Add to my home screen</button>
+          <div class="appdl__ios" data-appdl-ios hidden>
+            <p><strong>On iPhone:</strong> tap <span class="appdl__share" aria-label="Share">⬆︎</span> Share in Safari, then <strong>“Add to Home Screen”</strong>.</p>
+          </div>
+          <p class="appdl__other" data-appdl-other hidden>Open this page on your phone and add NutriBae to your home screen. It’s free, no app store needed.</p>
+          <p class="appdl__done" data-appdl-done hidden>✓ You’re using the NutriBae app. Welcome back, bae 💗</p>
+        </div>
+        <div class="appdl__phone" aria-hidden="true">
+          <div class="appdl__screen">
+            <video src="assets/videos/app-promo.mp4" poster="assets/images/app-promo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="NutriBae app promo: shop, play to win, recipes, quizzes and spin to win" data-app-promo></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <ul class="trust trust--bottom" aria-label="Why shop with us">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v9H2zM13 9h4l3 3v3h-7"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg><span>Free USA shipping</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6a3 3 0 0 0-3 3"/><path d="M20 4v14h-7"/></svg><span>Free cookbook with any order</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></svg><span>Subscribe &amp; save 15%, cancel anytime</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Secure checkout</span></li>
+    </ul>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

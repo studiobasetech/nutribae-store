@@ -1,0 +1,68 @@
+/* Sign-in page: tabs + email form (loaded by login.html) */
+.lg-tabs { display: flex; width: 100%; padding: 4px; margin: 0 0 16px; border-radius: 999px; background: rgba(255,255,255,.8); }
+.lg-tabs[hidden] { display: none; }
+.lg-tabs button { flex: 1; border: 0; background: transparent; color: #111; font: inherit; font-size: 15px; font-weight: 700; padding: 10px 12px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s; }
+.lg-tabs button[aria-selected="true"] { background: #F19EC8; color: #fff; box-shadow: 0 4px 12px rgba(241,158,200,.35); }
+.lg-panel { width: 100%; }
+.lg-btns[hidden], .lg-or[hidden] { display: none; }
+.lg-note { margin: 0; font-size: 13px; color: #111; opacity: .75; }
+.lg-note[hidden] { display: none; }
+.lg-form { width: 100%; display: grid; gap: 12px; text-align: left; }
+.lg-field { display: grid; gap: 6px; font-size: 13.5px; font-weight: 700; color: #111; }
+.lg-field[hidden] { display: none; }
+.lg-field input { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #EAD6E1; border-radius: 14px; background: #fff; color: #111; font: inherit; font-size: 16px; font-weight: 400; }
+.lg-field input:focus { outline: 2px solid #F19EC8; border-color: transparent; }
+.lg-pw { position: relative; display: block; }
+.lg-pw input { padding-right: 70px; }
+.lg-pw__show { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); border: 0; background: #FFF3F9; color: #111; font: inherit; font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.lg-hint { font-size: 12px; font-weight: 500; color: #111; opacity: .65; }
+.lg-hint[hidden] { display: none; }
+.lg-link { justify-self: start; border: 0; background: none; padding: 0; font: inherit; font-size: 13.5px; font-weight: 600; color: #111; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lg-link[hidden] { display: none; }
+.lg-back { justify-self: center; }
+.lg-submit { min-height: 50px; font-size: 16px; font-weight: 700; }
+.lg-msg { margin: 0; font-size: 14px; color: #111; text-align: center; }
+.lg-msg:empty { display: none; }
+.lg-msg.is-good { padding: 10px 12px; border-radius: 12px; background: #fff; }
+.lg-card .lg-or { margin: 18px 0 14px; }
+
+/* Computer: two columns like My profile (welcome + perks left, form right).
+   Phones keep the stacked card. */
+.lg-intro, .lg-main, .lg-extra { width: 100%; display: flex; flex-direction: column; align-items: center; }
+@media (min-width: 900px) {
+  .container.lg { max-width: 1080px; padding-top: 32px; padding-bottom: 56px; }
+  .lg-card {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+    grid-template-areas: "intro main" "extra main";
+    grid-template-rows: auto 1fr;
+    column-gap: 56px; align-items: start; text-align: left;
+    padding: 48px 52px; border-radius: 36px;
+  }
+  .lg-card__glow { width: 420px; height: 420px; right: auto; left: -140px; top: -160px; }
+  .lg-intro { grid-area: intro; align-items: flex-start; }
+  .lg-extra { grid-area: extra; align-items: flex-start; }
+  .lg-main {
+    grid-area: main; align-self: center;
+    padding: 28px 28px 24px; border-radius: 26px;
+    background: rgba(255,255,255,.72); box-shadow: 0 18px 40px rgba(241,158,200,.22);
+  }
+  .lg-logo { width: 190px; }
+  .lg-title { font-size: 46px; margin-top: 26px; }
+  .lg-sub { font-size: 17px; max-width: 40ch; margin-bottom: 0; }
+  .lg-extra .lg-perks { margin-top: 28px; max-width: 460px; }
+  .lg-extra .lg-perks li { padding: 14px; font-size: 14px; background: rgba(255,255,255,.8); }
+  .lg-extra .lg-or { max-width: 460px; justify-content: flex-start; }
+  .lg-extra .lg-fine { max-width: 460px; }
+  .lg-main .lg-tabs { background: #FFF3F9; }
+}
+
+/* Title always on one line, sized to fit */
+.lg-card .lg-title { white-space: nowrap; font-size: clamp(20px, calc((min(100vw, 552px) - 84px) / 10.3), 40px); }
+@media (min-width: 900px) { .lg-card .lg-title { font-size: clamp(24px, calc((min(100vw, 1112px) - 648px) / 10.3), 46px); } }
+
+/* Birthday (create account) */
+.lg-bday { border: 0; margin: 0; padding: 0; min-width: 0; }
+.lg-bday legend { padding: 0; margin-bottom: 6px; font-size: 13.5px; font-weight: 700; color: #111; }
+.lg-bday__perk { margin-left: 6px; font-weight: 500; font-size: 12px; opacity: .75; }
+.lg-bday__row { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 8px; }
+.lg-bday__row input { text-align: center; padding: 0 8px; }

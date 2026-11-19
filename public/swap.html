@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sweet Swap — NutriBae</title>
+  <meta name="description" content="Swap your sweet cravings for high-protein NutriBae recipes.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="swap" data-app>
+  <div id="site-top"></div>
+
+  <main>
+    <section class="lab-hero">
+      <div class="container">
+        <p class="app-eyebrow">Sweet Swap</p>
+        <h1 class="app-title">Craving something?</h1>
+        <p class="app-sub">Tap what you’re craving and we’ll swap it for a NutriBae treat with the same vibe and way more protein.</p>
+        <ol class="swap-steps" aria-label="How it works">
+          <li><span>1</span>Pick a craving</li>
+          <li><span>2</span>See your swap</li>
+          <li><span>3</span>Make it in minutes</li>
+        </ol>
+      </div>
+    </section>
+    <div class="swap">
+      <ul class="cravings" data-cravings aria-label="Cravings"></ul>
+      <section class="card vs" data-vs hidden aria-live="polite"></section>
+      <p class="fine">“Usual” values are rough averages for a common serving and vary a lot by brand and size. NutriBae values are per serving from the Wellness Made Sweet cookbook.</p>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/app-store.js"></script>
+  <script src="js/recipes-data.js"></script>
+  <script src="js/swap.js"></script>
+</body>
+</html>

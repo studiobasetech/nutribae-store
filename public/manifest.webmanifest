@@ -1,0 +1,20 @@
+{
+  "name": "NutriBae",
+  "short_name": "NutriBae",
+  "description": "Dessert-inspired, plant-based nutrition: recipes, your Sweet Plan, My Sweet Day and the shop.",
+  "start_url": "/my-day.html?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F19EC8",
+  "icons": [
+    { "src": "/assets/images/app-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/images/app-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Recipes", "url": "/recipes.html", "icons": [{ "src": "/assets/images/app-icon-192.png", "sizes": "192x192" }] },
+    { "name": "Sweet Swap", "url": "/swap.html", "icons": [{ "src": "/assets/images/app-icon-192.png", "sizes": "192x192" }] },
+    { "name": "Shop", "url": "/shop.html", "icons": [{ "src": "/assets/images/app-icon-192.png", "sizes": "192x192" }] }
+  ]
+}

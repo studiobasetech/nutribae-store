@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NutriBae</title>
+  <meta name="description" content="NutriBae dessert-inspired, plant-based nutrition.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+  <div id="site-top"></div>
+
+  <!-- Product page: product.html?handle=<shopify handle>. Built by js/product.js
+       from the live Shopify products; reviews come from Judge.me. -->
+  <main class="container pdp" data-pdp>
+    <p class="pdp__loading">Loading product…</p>
+  </main>
+
+  <section class="container reviews" id="reviews" aria-labelledby="reviews-title" data-reviews hidden>
+    <h2 class="h-section" id="reviews-title">Reviews</h2>
+    <div class="reviews__summary" data-reviews-summary></div>
+    <ul class="reviews__list" data-reviews-list></ul>
+    <button class="btn reviews__more" type="button" data-reviews-more hidden>Show more reviews</button>
+    <div class="wr" id="write-review" data-write-review></div>
+  </section>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

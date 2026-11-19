@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you — NutriBae</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="success">
+  <div id="site-top"></div>
+
+  <main>
+    <header class="page-head">
+      <h1>Sweet! You’re all set.</h1>
+      <p>Your order is confirmed, bae.</p>
+    </header>
+
+    <div class="container">
+      <article class="prose">
+        <section class="upsell" data-upsell hidden aria-labelledby="upsell-title"></section>
+        <div class="spin-cta" data-spin-cta hidden>
+          <span aria-hidden="true">🎡</span>
+          <div><strong>Your order unlocked a bonus spin!</strong><small>It always wins a code for your next order.</small></div>
+          <button class="btn" type="button" data-spin-cta-go>Spin now</button>
+        </div>
+        <p>We’ve emailed your receipt. You’ll get another email with tracking as soon as your order ships.</p>
+        <p>Subscribed &amp; saving? Your next order ships automatically every month, and you can skip or cancel anytime in <a href="/api/portal">Manage my subscription</a>.</p>
+        <div class="cookbook-box" data-cookbook-box hidden>
+          <img src="assets/images/cookbook-promo-poster.jpg" alt="" width="120" height="160">
+          <div>
+            <h2>Your free cookbook is ready</h2>
+            <p data-cookbook-msg>Download Wellness Made Sweet now. All 25 recipes are unlocked in the Recipes tab too, and the link is in your order confirmation email.</p>
+            <p class="cookbook-box__btns" data-cookbook-btns>
+              <a class="btn" href="#" data-cookbook-pdf>Download the PDF</a>
+              <a class="btn btn--outline" href="recipes.html">Open the recipes</a>
+            </p>
+          </div>
+        </div>
+        <p>Questions about your order? Email us at <a href="mailto:hello@example.com">hello@example.com</a>. <!-- TODO: your support email --></p>
+        <p style="margin-top:28px"><a class="btn" href="shop.html">Keep shopping</a></p>
+      </article>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/success.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — NutriBae</title>
+  <meta name="description" content="Shop NutriBae plant-based protein, energy and hydration powders.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F19EC8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+  <div id="site-top"></div>
+
+  <main>
+    <!-- Shop hero: lifestyle photo (assets/images/shop-hero-pastel.jpg) -->
+    <header class="shop-hero">
+      <img class="shop-hero__photo" src="assets/images/shop-hero-pastel.jpg" alt="Woman in a pastel kitchen with NutriBae Chocolate Brownie Delight and Vanilla Birthday Cake protein powder" width="1586" height="992" fetchpriority="high">
+      <div class="shop-hero__inner">
+        <div class="shop-hero__text">
+          <h1 class="shop-hero__title">Wellness just got sweeter</h1>
+          <p class="shop-hero__sub">Dessert-inspired, plant-based nutrition. Get the Wellness Made Sweet cookbook free with any purchase.</p>
+          <p class="rating-badge" data-overall-rating hidden></p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="sf" aria-label="Filter products" data-shop-filters>
+        <div class="sf__cats" role="tablist" aria-label="Category" data-sf-cats></div>
+        <div class="sf__bar">
+          <button class="sf__toggle" type="button" aria-expanded="false" aria-controls="sf-panel" data-sf-toggle>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 5h14M6 10h8M8.5 15h3"/></svg>
+            Filters <span class="sf__badge" data-sf-badge hidden></span>
+          </button>
+          <p class="sf__count" data-sf-count aria-live="polite"></p>
+          <label class="sf__sort"><span class="sr-only">Sort by</span>
+            <select data-sf-sort>
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="sf__panel" id="sf-panel" data-sf-panel hidden></div>
+        <div class="sf__active" data-sf-active></div>
+      </section>
+      <section class="bundles" id="bundles" aria-labelledby="bundles-title" data-bundles hidden>
+        <div class="bundles__head">
+          <h2 class="h-section" id="bundles-title">Better together, bae</h2>
+          <p>Bundle your favorites and save up to 15%.</p>
+        </div>
+        <ul class="bundle-grid" data-bundle-grid></ul>
+      </section>
+      <ul class="product-grid" data-product-grid></ul>
+      <div class="sf__empty" data-sf-empty hidden>
+        <p>No products match these filters.</p>
+        <button class="btn" type="button" data-sf-clear>Clear filters</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/spin.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
